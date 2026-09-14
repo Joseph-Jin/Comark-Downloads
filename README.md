@@ -5,7 +5,7 @@ Capture on Mac. Annotate on iPad. Copy your feedback back.
 **This public repository contains product information and release downloads only.**
 All iPad, Mac, and Windows application source code remains private. Publishing these downloads does not make the applications open source.
 
-[Website](https://site-joseph-jins-projects.vercel.app) · [All releases](https://github.com/Joseph-Jin/Comark-Downloads/releases)
+[Website](https://comark.1491563001.workers.dev) · [All releases](https://github.com/Joseph-Jin/Comark-Downloads/releases)
 
 ## Download v0.2.2
 
