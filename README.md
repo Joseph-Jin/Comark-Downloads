@@ -10,17 +10,17 @@ This public repository contains product information and binaries only. All appli
 
 | Platform | Download | Requirements |
 | --- | --- | --- |
-| Mac 0.2.2 | [Comark-Mac.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.2/Comark-Mac.zip) | macOS 14+, Apple silicon or Intel |
-| Windows 0.2.3 | [Comark-Windows.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.3-windows/Comark-Windows.zip) | Windows x64; no Python installation needed |
-| Checksums | [Mac](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.2/SHA256SUMS.txt) · [Windows](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.3-windows/SHA256SUMS.txt) | Verify each ZIP file |
+| Mac 0.2.3 | [Comark-Mac.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.3/Comark-Mac.zip) | macOS 14+, Apple silicon or Intel |
+| Windows 0.2.3 | [Comark-Windows.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.3/Comark-Windows.zip) | Windows x64; no Python installation needed |
+| Checksums | [Mac](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.3/SHA256SUMS.txt) · [Windows](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.3/SHA256SUMS.txt) | Verify each ZIP file |
 
 Both desktop companions require an iPad with Comark installed. iPad 0.2.3 (9) has been uploaded to App Store Connect; TestFlight installation requires an invitation and completion of Apple processing. A public App Store download is not available yet.
 
 ### Mac
 
-Unzip and move ComarkMac.app to Applications. Open it and allow screen recording when asked, then pair using its six-digit code. The download above remains the older 0.2.2 preview, which has not been notarized and may be blocked by macOS.
+Unzip and move ComarkMac.app to Applications. Open it and allow screen recording when asked, then pair using its six-digit code. The download is the actual macOS universal app, version 0.2.3 (9), signed with Apple Developer ID. Apple notarization is pending and macOS may block this preview from opening.
 
-**Mac 0.2.3 is awaiting Apple notarization.** Its Developer ID signing is complete, but the new package has not replaced the old download. The upcoming release removes the development-keychain dependency.
+**Mac 0.2.3 is awaiting Apple notarization.** This corrected preview replaces the mispackaged v0.2.2 Mac download, which contained an iPad application. The new packaging process removes the development-keychain dependency. Do not treat it as notarized until Apple processing is complete.
 
 ### Windows
 
@@ -39,7 +39,7 @@ Windows supports direct iPad pairing, display selection, screenshot capture, and
 本仓库仅公开产品说明与下载文件，应用源码保持私有。下载无需 GitHub 账号。
 
 - 电脑端必须搭配已安装 Comark 的 iPad 使用。iPad 0.2.3（9）已提交 App Store Connect，需在 Apple 处理完成后通过 TestFlight 邀请安装，暂未公开上架。
-- **Mac 0.2.3 正在等待 Apple 公证**，下载暂时保留尚未公证的旧版 0.2.2。支持 macOS 14 及以上、Apple 芯片和 Intel。
+- **Mac 已更新至 0.2.3（9）**，修正了旧下载包误装 iPad 应用的问题。支持 macOS 14 及以上、Apple 芯片和 Intel；已完成 Developer ID 签名，但 Apple 公证尚未完成，系统可能阻止此预览包打开。
 - Windows 已更新至 0.2.3，压缩包包含 EXE 和说明。启动广播后，iPad 可以在同一局域网发现并直接连接；支持选屏、截图和批量回传剪贴板。
 - iPad 的连接页可重新发现电脑；离线设备会在扫描或连通性检查后移除。
 
