@@ -11,8 +11,8 @@ This public repository contains product information and binaries only. All appli
 | Platform | Download | Requirements |
 | --- | --- | --- |
 | Mac 0.2.3 | [Comark-Mac.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.3/Comark-Mac.zip) | macOS 14+, Apple silicon or Intel |
-| Windows 0.2.3 | [Comark-Windows.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.3/Comark-Windows.zip) | Windows x64; no Python installation needed |
-| Checksums | [Mac](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.3/SHA256SUMS.txt) · [Windows](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.3/SHA256SUMS.txt) | Verify each ZIP file |
+| Windows 0.2.4 | [Comark-Windows.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.4-windows/Comark-Windows.zip) | Windows x64; no Python installation needed |
+| Checksums | [Mac](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.4-windows/SHA256SUMS.txt) · [Windows](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v0.2.4-windows/SHA256SUMS.txt) | Verify each ZIP file |
 
 Both desktop companions require an iPad with Comark installed. iPad 0.2.3 (9) has been uploaded to App Store Connect; TestFlight installation requires an invitation and completion of Apple processing. A public App Store download is not available yet.
 
@@ -26,7 +26,7 @@ Unzip and move ComarkMac.app to Applications. Open it and allow screen recording
 
 Unzip and open Comark-Windows.exe. Click Start advertisement and allow the private-network firewall prompt. On iPad, open Connect computer, press Rediscover, select the PC and enter its six-digit code. Keep both devices on the same LAN.
 
-Windows supports direct iPad pairing, display selection, screenshot capture, and single or multiple image delivery to the clipboard. The executable is unsigned, so Windows may ask before opening it.
+Windows supports direct iPad pairing, display selection, screenshot capture, and single or multiple image delivery to the clipboard. The startup self-check verifies Wi-Fi, Bonjour, firewall, display capture and can request UAC permission to repair Comark firewall rules. The executable is unsigned, so Windows may ask before opening it.
 
 ### What's changed
 
@@ -40,7 +40,7 @@ Windows supports direct iPad pairing, display selection, screenshot capture, and
 
 - 电脑端必须搭配已安装 Comark 的 iPad 使用。iPad 0.2.3（9）已提交 App Store Connect，需在 Apple 处理完成后通过 TestFlight 邀请安装，暂未公开上架。
 - **Mac 已更新至 0.2.3（9）**，修正了旧下载包误装 iPad 应用的问题。支持 macOS 14 及以上、Apple 芯片和 Intel；已完成 Developer ID 签名，但 Apple 公证尚未完成，系统可能阻止此预览包打开。
-- Windows 已更新至 0.2.3，压缩包包含 EXE 和说明。启动广播后，iPad 可以在同一局域网发现并直接连接；支持选屏、截图和批量回传剪贴板。
+- Windows 已更新至 0.2.4，压缩包包含 EXE 和说明。启动广播后，iPad 可以在同一局域网发现并直接连接；支持选屏、截图和批量回传剪贴板。
 - iPad 的连接页可重新发现电脑；离线设备会在扫描或连通性检查后移除。
 
 Copyright © 2026 Joseph-Jin. All rights reserved. No open-source license is granted for the applications by this repository.
