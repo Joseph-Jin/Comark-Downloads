@@ -10,7 +10,7 @@ This public repository contains product information and binaries only. All appli
 
 | Platform | Download | Requirements |
 | --- | --- | --- |
-| Mac 1.0 | [Comark-Mac.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0/Comark-Mac.zip) | macOS 14+, Apple silicon or Intel |
+| Mac 1.0 | [Comark-Mac-v1.0.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0/Comark-Mac-v1.0.zip) | macOS 14+, Apple silicon or Intel |
 | Windows 1.0 | [Comark-Windows.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0/Comark-Windows.zip) | Windows x64; no Python installation needed |
 | Checksums | [SHA256SUMS.txt](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0/SHA256SUMS.txt) | Verify each ZIP file |
 
@@ -22,13 +22,13 @@ One-line install:
     # Windows
     irm https://comark.work/install.ps1 | iex
 
-Both desktop companions require an iPad with Comark installed. They cannot be used on their own. iPad v1.0 (Build 24) is on TestFlight; installation requires an invitation. A public App Store download is not available yet.
+Both desktop companions require an iPad with Comark installed. They cannot be used on their own. iPad v1.0 (Build 27) is on TestFlight; installation requires an invitation. A public App Store download is not available yet.
 
 ### Mac
 
 **⚠️ First-time users:** macOS may block this build from opening. [See installation guide](https://comark.work/mac-guide) for three simple methods to open it. This is a one-time step; after that, the app opens normally.
 
-Unzip and move ComarkMac.app to Applications. Open it and allow screen recording when asked, then pair using its six-digit code. The download is the macOS universal app, signed with Apple Developer ID. Apple notarization is in progress.
+Unzip and move ComarkMac.app to Applications. Open it and allow screen recording when asked, then pair using its six-digit code. The download is the macOS universal app, signed with ad-hoc signature for development. Apple notarization requires a Developer ID certificate.
 
 ### Windows
 
@@ -51,3 +51,4 @@ Windows supports direct iPad pairing, display selection, screenshot capture, and
 本仓库仅公开产品说明与下载文件，应用源码保持私有。下载无需 GitHub 账号。
 
 **Mac 用户注意：** 首次打开时 macOS 可能提示无法验证，请查看[安装指南](https://comark.work/mac-guide)了解三种简单的打开方法。
+
