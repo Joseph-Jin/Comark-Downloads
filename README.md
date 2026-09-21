@@ -26,7 +26,9 @@ Both desktop companions require an iPad with Comark installed. They cannot be us
 
 ### Mac
 
-Unzip and move ComarkMac.app to Applications. Open it and allow screen recording when asked, then pair using its six-digit code. The download is the macOS universal app, signed with Apple Developer ID. Apple notarization is pending, so macOS may block this build from opening; right-click and choose Open to bypass the first-run prompt.
+**⚠️ First-time users:** macOS may block this build from opening. [See installation guide](https://comark.work/mac-guide) for three simple methods to open it. This is a one-time step; after that, the app opens normally.
+
+Unzip and move ComarkMac.app to Applications. Open it and allow screen recording when asked, then pair using its six-digit code. The download is the macOS universal app, signed with Apple Developer ID. Apple notarization is in progress.
 
 ### Windows
 
@@ -48,17 +50,4 @@ Windows supports direct iPad pairing, display selection, screenshot capture, and
 
 本仓库仅公开产品说明与下载文件，应用源码保持私有。下载无需 GitHub 账号。
 
-| 平台 | 下载 | 要求 |
-| --- | --- | --- |
-| Mac 1.0 | [Comark-Mac.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0/Comark-Mac.zip) | macOS 14 及以上，Apple 芯片或 Intel |
-| Windows 1.0 | [Comark-Windows.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0/Comark-Windows.zip) | Windows x64，无需安装 Python |
-| 校验值 | [SHA256SUMS.txt](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0/SHA256SUMS.txt) | 用于校验压缩包 |
-
-- 电脑端必须搭配已安装 Comark 的 iPad 使用，无法单独运行。iPad v1.0（Build 24）已上 TestFlight，需通过测试邀请安装，暂未公开上架。
-- Mac 版已完成 Developer ID 签名，Apple 公证尚未完成，首次打开可以右键选择「打开」跳过系统提示。
-- Windows 版启动后先运行自检，检查 Wi-Fi、Bonjour、防火墙和屏幕采集；防火墙检查失败时点击「修复网络访问」并批准 UAC。安装包未签名，SmartScreen 可能会询问。
-- iPad 端默认使用 Apple 端上语音识别，开箱可用；语音笔落笔录音、抬笔转写，并在画面上生成带编号的标记。
-- 断网、锁屏或切换 Wi-Fi 后会自动重连上次配对的电脑。
-
-Copyright © 2026 Joseph-Jin. All rights reserved. No open-source license is granted for the applications by this repository.
-
+**Mac 用户注意：** 首次打开时 macOS 可能提示无法验证，请查看[安装指南](https://comark.work/mac-guide)了解三种简单的打开方法。
