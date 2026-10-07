@@ -23,7 +23,7 @@ One-line install:
     # Windows
     irm https://comark.work/install.ps1 | iex
 
-Both desktop companions require an iPad with Comark installed. They cannot be used on their own. iPad v1.0 (Build 32) is on TestFlight; installation requires an invitation. A public App Store download is not available yet.
+Both desktop companions require an iPad with Comark installed. They cannot be used on their own. The Comark iPad app 1.0 is in App Store review; the App Store link will be added here once it is approved. Comark is not offered on the China mainland App Store for this release.
 
 ### Mac 1.0
 
@@ -55,6 +55,8 @@ Extract the whole `Comark-Windows` folder (keep `_internal` beside the EXE) and 
 
 本仓库仅公开产品说明与下载文件，应用源码保持私有。下载无需 GitHub 账号。
 
+**iPad 端：** Comark iPad 1.0 正在 App Store 审核中，通过后会在这里补上 App Store 链接。本版本暂不在中国大陆 App Store 上架。
+
 **Mac 用户注意：** 首次打开时 macOS 可能提示无法验证，请查看[安装指南](https://comark.work/mac-guide)了解三种简单的打开方法。
 
 **Windows 用户注意（v1.0.1 修复）：** 部分电脑上 v1.0 启动时被 Windows 安全中心拦截——提示「此应用的一部分已被阻止 … registry.cp312-win_amd64.pyd」。v1.0.1 将发现服务改为纯 Python 实现，该组件已不存在；配对、截图、剪贴板功能不变。同时改进：启动错误如实提示（组件被拦截不再误报端口占用）、启动失败后释放端口可直接重试、自检不再把端口被其他程序占用误判为正常。完整解压 `Comark-Windows` 文件夹（保持 `_internal` 在 EXE 旁）后双击 `Comark-Windows.exe`，或直接运行安装器。
@@ -66,4 +68,3 @@ Extract the whole `Comark-Windows` folder (keep `_internal` beside the EXE) and 
 ## Rights
 
 Copyright © 2026 Joseph-Jin. All rights reserved. No open-source license is granted for the applications by this repository.
-
