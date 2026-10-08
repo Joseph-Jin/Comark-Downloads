@@ -11,9 +11,8 @@ This public repository contains product information and binaries only. All appli
 | Platform | Download | Requirements |
 | --- | --- | --- |
 | Mac 1.0 | [Comark-Mac-v1.0.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0/Comark-Mac-v1.0.zip) | macOS 14+, Apple silicon or Intel |
-| Windows 1.0.1 (ZIP) | [Comark-Windows.zip](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0.1-windows/Comark-Windows.zip) | Windows 10/11 x64; no Python installation needed |
-| Windows 1.0.1 (installer) | [Comark-Setup-1.0.1.exe](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0.1-windows/Comark-Setup-1.0.1.exe) | Per-user install, no admin required |
-| Checksums | [SHA256SUMS.txt](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0.1-windows/SHA256SUMS.txt) | Windows 1.0.1 + Mac 1.0 hashes |
+| Windows 1.0.2 (MSI) | [Comark-Windows-1.0.2.msi](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0.2-windows/Comark-Windows-1.0.2.msi) | Windows 10/11 x64; per-user install, no admin or Python needed |
+| Checksums | [SHA256SUMS.txt](https://github.com/Joseph-Jin/Comark-Downloads/releases/download/v1.0.2-windows/SHA256SUMS.txt) | Windows 1.0.2 + Mac 1.0 hashes |
 
 One-line install:
 
@@ -31,13 +30,11 @@ Both desktop companions require an iPad with Comark installed. They cannot be us
 
 Unzip and move ComarkMac.app to Applications. Open it and allow screen recording when asked, then pair using its six-digit code. The download is the macOS universal app, signed with an Apple Development certificate. Apple notarization requires a Developer ID certificate and is pending.
 
-### Windows 1.0.1 — fixes the "part of this app has been blocked" startup error
+### Windows 1.0.2 — MSI installer
 
-Some Windows machines blocked v1.0 at startup: Windows Security reported *"Part of this app has been blocked ... registry.cp312-win_amd64.pyd"*. In 1.0.1 the Bonjour discovery library ships as **pure Python**, so that component no longer exists in the package. Pairing, display capture, and clipboard behavior are unchanged.
+Windows now ships as a standard MSI installer. Earlier releases were a ZIP: extracting a downloaded ZIP marks every EXE, DLL and PYD inside as coming from the internet, and Smart App Control or SmartScreen could block one of them. The MSI is installed by Windows Installer, the way most Windows software is installed.
 
-Also new in 1.0.1: startup errors are reported accurately (a blocked component is no longer mislabeled as "port in use"), a failed start releases the port so you can retry immediately, and the self-check no longer reports OK while another program occupies the port.
-
-Extract the whole `Comark-Windows` folder (keep `_internal` beside the EXE) and double-click `Comark-Windows.exe`, or run the installer. Run the self-check first: it verifies Wi-Fi, Bonjour, firewall rules, and display capture, and can request UAC permission to repair Comark firewall rules. Then click **Start advertisement** and allow the private-network firewall prompt. On iPad, open **Connect computer**, press Rediscover, select the PC, and enter its six-digit code. Keep both devices on the same LAN.
+Double-click `Comark-Windows-1.0.2.msi`. It installs for your user account with no administrator prompt and adds Comark to the Start menu. Upgrading from 1.0.1 keeps your device identity and pairing code; uninstall from Settings → Apps. Open Comark and run the self-check first: it verifies Wi-Fi, Bonjour, firewall rules, and display capture, and can request UAC permission to repair Comark firewall rules. Then click **Start advertisement** and allow the private-network firewall prompt. On iPad, open **Connect computer**, press Rediscover, select the PC, and enter its six-digit code. Keep both devices on the same LAN.
 
 **Not code-signed.** SmartScreen or Smart App Control may still confirm before opening, and additional security software could block a different component. Do not disable Windows security. If a block appears, note the file name from Event Viewer → CodeIntegrity → Operational (event 3077) and report it at [comark.work/support](https://comark.work/support). A fully signed release is planned once a trusted code-signing certificate is enrolled.
 
@@ -59,9 +56,9 @@ Extract the whole `Comark-Windows` folder (keep `_internal` beside the EXE) and 
 
 **Mac 用户注意：** 首次打开时 macOS 可能提示无法验证，请查看[安装指南](https://comark.work/mac-guide)了解三种简单的打开方法。
 
-**Windows 用户注意（v1.0.1 修复）：** 部分电脑上 v1.0 启动时被 Windows 安全中心拦截——提示「此应用的一部分已被阻止 … registry.cp312-win_amd64.pyd」。v1.0.1 将发现服务改为纯 Python 实现，该组件已不存在；配对、截图、剪贴板功能不变。同时改进：启动错误如实提示（组件被拦截不再误报端口占用）、启动失败后释放端口可直接重试、自检不再把端口被其他程序占用误判为正常。完整解压 `Comark-Windows` 文件夹（保持 `_internal` 在 EXE 旁）后双击 `Comark-Windows.exe`，或直接运行安装器。
+**Windows 用户注意（v1.0.2 改为 MSI 安装包）：** 以前的 ZIP 解压后，里面每个 EXE、DLL、PYD 都会带上"来自网络"的标记，可能被智能应用控制或 SmartScreen 拦截。现在改为标准 MSI 安装包，由 Windows Installer 安装。双击 `Comark-Windows-1.0.2.msi` 即可，按用户安装、无需管理员权限，并会添加到开始菜单；从 1.0.1 升级会保留配对码与设备身份，可在「设置 → 应用」中卸载。
 
-**签名状态：** Windows 1.0.1 与 Mac 均未完成发行签名，SmartScreen / Gatekeeper / 智能应用控制仍可能提示确认。请不要关闭安全防护；如仍被拦截，请在事件查看器（CodeIntegrity → Operational，事件 3077）记下被拦截的文件名，并通过 [comark.work/support](https://comark.work/support) 反馈。已计划接入受信任的代码签名证书后发布签名版。
+**签名状态：** Windows 1.0.2 与 Mac 均未完成发行签名，SmartScreen / Gatekeeper / 智能应用控制仍可能提示确认。请不要关闭安全防护；如仍被拦截，请在事件查看器（CodeIntegrity → Operational，事件 3077）记下被拦截的文件名，并通过 [comark.work/support](https://comark.work/support) 反馈。已计划接入受信任的代码签名证书后发布签名版。
 
 两台设备需在同一局域网；Windows 端无法脱离 iPad 单独使用。校验值见 `SHA256SUMS.txt`。
 
